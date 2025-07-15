@@ -1,0 +1,758 @@
+🔄 **HTML Edit Mode** - Processing your edit request...
+
+Here are the precise color scheme changes to create a sophisticated black/gold professional look:
+
+1. Root color variables:
+
+```diff
+<<<<<<< SEARCH
+        :root {
+            --primary: #e67e22;
+            --primary-dark: #d35400;
+            --secondary: #2c3e50;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --accent: #e74c3c;
+            --text: #333;
+        }
+=======
+        :root {
+            --primary: #D4AF37;
+            --primary-dark: #A8841A;
+            --secondary: #000000;
+            --light: #111111;
+            --dark: #222222;
+            --accent: #222222;
+            --text: #e5e5e5;
+            --bg: #000000;
+        }
+>>>>>>> REPLACE
+```
+
+```
+
+2. Body background:
+
+```diff
+<<<<<<< SEARCH
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            padding-top: 80px;
+        }
+=======
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            padding-top: 80px;
+        }
+>>>>>>> REPLACE
+`
+```
+``
+
+3. Navbar glass effect:
+
+```diff
+<<<<<<< SEARCH
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+=======
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+>>>>>>> REPLACE
+```
+
+```
+
+4. Menu items:
+
+```diff
+<<<<<<< SEARCH
+        .nav-link {
+            color: var(--dark);
+=======
+        .nav-link {
+            color: #d4d4d4;
+>>>>>>> REPLACE
+``
+```
+`
+
+5. Special cards:
+
+```diff
+<<<<<<< SEARCH
+        .special-card {
+            background: white;
+=======
+        .special-card {
+            background: var(--dark);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+>>>>>>> REPLACE
+`
+```
+``
+
+6. Footer background:
+
+```diff
+<<<<<<< SEARCH
+            background-color: var(--secondary);
+=======
+            background-color: var(--light);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+>>>>>>> REPLACE
+```
+
+```
+
+7. Hero section:
+
+```diff
+<<<<<<< SEARCH
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4e3dfc6f-6a77-4011-9eba-3acf9dee637a.png') no-repeat center center/cover;
+=======
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4e3dfc6f-6a77-4011-9eba-3acf9dee637a.png') no-repeat center center/cover;
+>>>>>>> REPLACE
+```
+
+```
+
+8. Signup form background:
+
+```diff
+<<<<<<< SEARCH
+            background: white;
+=======
+            background: var(--dark);
+>>>>>>> REPLACE
+```
+
+
+```
+These changes create a sophisticated black and gold color scheme that's perfect for an upscale restaurant website while maintaining all functionality. The gold (D4AF37) accents provide elegant contrast against the dark backgrounds.Here is the updated HTML content after applying above edits:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoria | Fine Dining Experience</title>
+    <style>
+        :root {
+            --primary: #D4AF37;
+            --primary-dark: #A8841A;
+            --secondary: #000000;
+            --light: #111111;
+            --dark: #222222;
+            --accent: #222222;
+            --text: #e5e5e5;
+            --bg: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            padding-top: 80px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: #d4d4d4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-nav {
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+        }
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            transition: all 0.5s ease;
+        }
+
+        /* Landing Page Styles */
+        .landing-page {
+            width: 100%;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4e3dfc6f-6a77-4011-9eba-3acf9dee637a.png') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        .about-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .about-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .specials {
+            padding: 5rem 2rem;
+            background-color: var(--light);
+        }
+
+        .special-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .special-card {
+            background: var(--dark);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .special-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .special-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .card-body p {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Signup Page Styles */
+        .signup-page {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            min-height: 100vh;
+            background-color: white;
+            padding: 2rem;
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signup-page.active {
+            left: 0;
+        }
+
+        .signup-form {
+            max-width: 500px;
+            width: 100%;
+            background: var(--dark);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-form h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .login-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--light);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 30px;
+        }
+
+        .footer-section {
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar with glass effect -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Savoria</div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Menu</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-nav">Reservations</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Landing Page -->
+        <div class="landing-page">
+            <section class="hero">
+                <h1>Welcome to Savoria</h1>
+                <p>Experience the finest culinary delights crafted by our master chefs using only the freshest ingredients sourced locally</p>
+                <button id="exploreBtn" class="btn">Explore & Reserve</button>
+            </section>
+
+            <section class="about-section">
+                <h2 class="section-title">Our Story</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>A Tradition of Excellence</h2>
+                        <p>Founded in 2005, Savoria has been redefining the dining experience in our community. Our passion for food is matched only by our commitment to exceptional service.</p>
+                        <p>Every dish tells a story - from our signature seafood creations to our farm-to-table specialties. We believe in creating memorable experiences that linger on your palate and in your memory.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74175809-7288-46e0-b9ae-e6cd0abfdbb0.png" alt="Chef preparing food in a modern restaurant kitchen with stainless steel countertops" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="specials">
+                <h2 class="section-title">Today's Specials</h2>
+                <div class="special-items">
+                    <div class="special-card">
+                        <div class="card-image">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/447d3134-948b-476a-ab5e-40e8322e7071.png" alt="Grilled salmon with lemon butter sauce served with asparagus and roasted potatoes" />
+                        </div>
+                        <div class="card-body">
+                            <h3>Lemon Herb Salmon</h3>
+                            <p>Fresh Atlantic salmon grilled to perfection with herbs and served with seasonal vegetables</p>
+                            <div class="price">$29.99</div>
+                        </div>
+                    </div>
+
+                    <div class="special-card">
+                        <div class="card-image">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ac694030-6c7e-4131-a222-bb1bdc6e7f9b.png" alt="Beef tenderloin steak with red wine reduction and truffle mashed potatoes" />
+                        </div>
+                        <div class="card-body">
+                            <h3>Beef Tenderloin</h3>
+                            <p>Premium cut beef with red wine reduction, served with truffle mashed potatoes</p>
+                            <div class="price">$36.99</div>
+                        </div>
+                    </div>
+
+                    <div class="special-card">
+                        <div class="card-image">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6e17327a-3ae7-4c41-81cd-07ed6d59b322.png" alt="Vegetable risotto with mushrooms, asparagus and parmesan cheese" />
+                        </div>
+                        <div class="card-body">
+                            <h3>Mushroom Risotto</h3>
+                            <p>Creamy arborio rice with wild mushrooms, white wine, and parmesan cheese</p>
+                            <div class="price">$22.99</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Signup Page (hidden initially) -->
+        <div class="signup-page" id="signupPage">
+            <div class="signup-form">
+                <h2>Create Your Account</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="form-submit">Sign Up</button>
+                </form>
+                <div class="login-link">
+                    <p>Already have an account? <a href="#">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Savoria</h3>
+                <p>Experience fine dining at its best with our carefully curated menu and exceptional service quality.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Gourmet Street<br>Foodville, CA 90210<br>info@savoria.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Savoria Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const exploreBtn = document.getElementById('exploreBtn');
+            const container = document.querySelector('.container');
+            const signupPage = document.getElementById('signupPage');
+            const signupForm = document.getElementById('signupForm');
+
+            // Toggle signup page
+            exploreBtn.addEventListener('click', function() {
+                container.classList.add('shift-left');
+                signupPage.classList.add('active');
+            });
+
+            // Form submission
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for signing up! We will contact you shortly to confirm your reservation.');
+                // Here you would typically send the form data to a server
+            });
+        });
+    </script>
+</body>
+</html>
+
+```
